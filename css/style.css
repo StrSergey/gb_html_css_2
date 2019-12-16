@@ -1,0 +1,1083 @@
+@font-face {
+    font-family: montserrat-light;
+    src: url(../fonts/montserrat-light.ttf);
+}
+
+@font-face {
+    font-family: raleway;
+    src: url(../fonts/raleway-regular.ttf);
+}
+
+@font-face {
+    font-family: raleway-medium;
+    src: url(../fonts/raleway-medium.ttf);
+}
+
+@font-face {
+    font-family: raleway-extrabold;
+
+    src: url(../fonts/raleway-extrabold.ttf);
+}
+
+@font-face {
+    font-family: raleway-semibold;
+
+    src: url(../fonts/raleway-semibold.ttf);
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    60%,
+    100% {
+        transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    80% {
+        transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 1920px;
+    margin: 0 auto;
+}
+
+/*=================HEADER==================*/
+
+.header {
+    margin: 0;
+    display: block;
+    background-color: #4b4945;
+    background-image: url(../img/photo.png);
+    padding-top: 40px;
+    color: #ffffff;
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    width: 181px;
+    display: flex;
+    margin-left: 336px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.logo-icon {
+    fill: white;
+}
+
+.logo-txt {
+    font-family: raleway, arial;
+    width: 115px;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 400;
+    letter-spacing: -1.36px;
+}
+
+.header-logo:hover .logo-icon {
+    fill: #c7b299;
+}
+
+.header-logo:hover .logo-txt {
+    color: #c7b299;
+}
+
+.header-logo:active .logo-icon {
+    fill: #95897B;
+    animation: bounce 1s;
+}
+
+.header-logo:active .logo-txt {
+    color: #95897B;
+    animation: bounce 1s;
+}
+
+/*=================header-nav=================*/
+
+.header-nav {
+    display: flex;
+}
+
+.header-list {
+    padding: 0px;
+    display: flex;
+    width: 637px;
+    margin-left: 219px;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.header-list-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: montserrat-light, arial;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.header-list-link-active {
+    text-decoration: none;
+    color: #c7b299;
+    font-family: montserrat-light, arial;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.header-list-link:hover {
+    text-decoration: none;
+    color: #c7b299;
+    font-family: montserrat-light, arial;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.header-list-link:active {
+    text-decoration: none;
+    color: #95897B;
+    font-family: montserrat-light, arial;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.header-search {
+    display: flex;
+    margin-left: 63px;
+    width: 70px;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 334px;
+}
+
+.header-search-cart:before {
+    content: url("../img/icon-cart.png");
+    position: relative;
+}
+
+input[type="search"] {
+    width: 24px;
+    height: 24px;
+    outline: none;
+    background-image: url("../img/icon-search.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+}
+
+input[type="search"]:focus {
+    width: 200px;
+    transition: width 1s ease-in;
+    background: #95897B;
+    filter: opacity(50%);
+    color: #ffffff;
+    -webkit-transform: scale(1.5);
+    position: absolute;
+    margin-left: 17px;
+    margin-top: -12px;
+    /* не хватило сил до конца стилизовать этот поиск..
+    подглядывал сюда
+    https://webformyself.com/css-eksperimenty-s-polem-i-knopkoj-poiska/    
+*/
+}
+
+/*================header-slider========================*/
+
+.header-slider {
+    margin-top: 285px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider-arrow-l {
+    display: block;
+    width: 40px;
+    height: 73px;
+    position: relative;
+    margin-left: 110px;
+}
+
+.slider-arrow-l:after {
+    content: "";
+    display: inline-block;
+    width: 52px;
+    height: 52px;
+    border-top: 2px solid #a4a3a0;
+    border-left: 2px solid #a4a3a0;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 10px;
+    left: -25px;
+}
+
+.slider-arrow-l:hover:after {
+    border-top: 2px solid #c7b299;
+    border-left: 2px solid #c7b299;
+}
+
+.slider-arrow-l:active:after {
+    border-top: 2px solid #95897B;
+    border-left: 2px solid #95897B;
+}
+
+.slider-arrow-r {
+    display: block;
+    width: 40px;
+    height: 73px;
+    position: relative;
+    margin-right: 110px;
+}
+
+.slider-arrow-r:after {
+    content: "";
+    display: inline-block;
+    width: 52px;
+    height: 52px;
+    border-top: 2px solid #d3c1ad;
+    border-right: 2px solid #d3c1ad;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 10px;
+    left: -25px;
+}
+
+.slider-arrow-r:hover:after {
+    border-top: 2px solid #c7b299;
+    border-right: 2px solid #c7b299;
+}
+
+.slider-arrow-r:active:after {
+    border-top: 2px solid #95897B;
+    border-right: 2px solid #95897B;
+}
+
+.slider-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider-text h4 {
+    padding: 0px;
+    margin: 0px;
+    font-family: raleway-medium, arial;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.slider-text h2 {
+    padding: 0;
+    margin: 0;
+    width: 589px;
+    font-family: raleway-extrabold, arial;
+    font-size: 52px;
+    font-weight: 800;
+    object-fit: contain;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+.slider-text p {
+    width: 562px;
+    object-fit: contain;
+    font-family: montserrat-light, arial;
+    font-size: 16px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+.slider-text-btn {
+    display: flex;
+    padding: 0px;
+    margin-top: 52px;
+    width: 170px;
+    height: 53px;
+    text-align: center;
+    color: #ffffff;
+    justify-content: center;
+    box-shadow: inset 0 -3px 0 #736357;
+    border-radius: 3px;
+    background-color: #998675;
+    align-items: center;
+    font-family: raleway-extrabold, arial;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.slider-text-btn:hover {
+    background-color: #736357;
+}
+
+.slider-text-btn:active {
+    background-color: #95897B;
+    animation: bounce 1s;
+}
+
+.pagination {
+    width: 100%;
+    padding-bottom: 40px;
+    margin-top: 287px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination-circle {
+    margin-right: 5px;
+    display: flex;
+    width: 11px;
+    height: 11px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background-color: #ccc;
+    opacity: 0.5;
+    background-clip: content-box;
+}
+
+.pagination-circle:hover {
+    margin-right: 5px;
+    display: flex;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    opacity: 0.5;
+    border: 2px solid #cdc0ac;
+    background: none;
+}
+
+.pagination-circle:active {
+    margin-right: 5px;
+    display: flex;
+    width: 11px;
+    height: 11px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    opacity: 0.5;
+    border: 2px solid #cdc0ac;
+    background: #95897B;
+    animation: bounce 1s;
+}
+
+/* судя по всему тут эктив не нужен, оставил пока*/
+.pagination-circle-active {
+    margin-right: 5px;
+    display: flex;
+    width: 11px;
+    height: 11px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    opacity: 0.5;
+    border: 2px solid #cdc0ac;
+    background: none;
+    border: 2px solid #cdc0ac;
+    background: none;
+}
+
+/*==================services======================*/
+
+.services {
+    padding: 80px;
+    margin-left: 298px;
+    width: 1166px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #8c8c8c;
+}
+
+.services-sect {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 266px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.services-sect:after {
+    content: "";
+    margin-top: 30px;
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-color: #f1eee9;
+}
+
+.services-sect:hover .services-icon {
+    fill: #c7b299;
+}
+
+.services-sect:active .services-icon {
+    fill: #95897B;
+    animation: bounce 1s;
+}
+
+.services-sect:hover .services-title {
+    color: #c7b299;
+}
+
+.services-sect:active .services-title {
+    color: #95897B;
+}
+
+.services-sect:hover:after {
+    background-color: #c7b299;
+}
+
+.services-sect:active:after {
+    background-color: #95897B;
+}
+
+.services-sect-active:after {
+    content: "";
+    margin-top: 30px;
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-color: #c7b299;
+}
+
+.services-sect-active .services-icon {
+    fill: #c7b299;
+}
+
+.services-sect-active .services-title {
+    color: #c7b299;
+}
+
+.services-icon {
+    display: block;
+    height: 49px;
+    fill: #555555;
+    margin: 0 0 29px 0;
+}
+
+.services-title {
+    width: 195px;
+    margin: 0 0 19px 0;
+    text-align: center;
+    color: #555555;
+    font-family: raleway-semibold, arial;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.features-txt {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+/*=================Realization==================*/
+
+.realization {
+    padding: 83px 0 0 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1920x;
+    text-align: center;
+    color: #8c8c8c;
+    background-color: #fbfaf8;
+}
+
+.realization-title {
+    color: #555555;
+    font-family: raleway-semibold, arial;
+    font-size: 30px;
+    font-weight: 400;
+    padding-bottom: 24px;
+}
+
+.realization-txt {
+    padding-bottom: 40px;
+    width: 757px;
+    font-family: montserrat-light, arial;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.75;
+    text-align: center;
+    color: #8c8c8c;
+}
+
+.realization:after {
+    content: "";
+    margin-top: 30px;
+    display: block;
+    width: 1230px;
+    height: 482px;
+    background-image: url(../img/3-layers.webp);
+}
+
+/*===================purchase======================*/
+
+.purchase {
+    padding: 50px 376px 50px 376px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1920x;
+    background-color: #f4f5f8;
+    background-image: linear-gradient(to right, #211b19 0%, #4e3427 100%);
+}
+
+.purchase-boxes {
+    padding: 0 0 0 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 530px;
+}
+
+.purchase-boxes-fst {
+    padding-bottom: 8px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.purchase-boxes-h {
+    padding: 0;
+    margin: 0;
+    padding-right: 4px;
+    font-family: raleway, arial;
+    font-size: 28px;
+    font-weight: 400;
+    color: #c7b299;
+    text-transform: capitalize;
+}
+
+.purchase-boxes-title {
+    padding: 0;
+    margin: 0;
+    font-family: raleway, arial;
+    font-size: 28px;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+.purchase-boxes-txt {
+    padding: 0;
+    margin: 0;
+    color: #5f5856;
+    font-family: montserrat-light, arial;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: left;
+    /*если задать width:456px; то весь текст не помещается*/
+}
+
+.purchase-btn {
+    margin-left: 470px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 50px;
+    box-shadow: inset 0 -3px 0 #736357;
+    border-radius: 3px;
+    background-color: #998675;
+    text-decoration: none;
+}
+
+.purchase-btn:hover {
+    background-color: #736357;
+}
+
+.purchase-btn:active {
+    background-color: #95897B;
+    animation: bounce 1s;
+}
+
+.purchase-btn-txt {
+    color: #ffffff;
+    font-family: raleway-extrabold, arial;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+    text-transform: uppercase;
+}
+
+/*====================project=========================*/
+/*================project-header=====================*/
+
+.project {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1920x;
+    flex-direction: column;
+}
+
+.project-title {
+    margin: 80px 0 40px 0;
+    color: #555555;
+    font-family: raleway-semibold, arial;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.project-txt {
+
+    text-align: center;
+    width: 757px;
+    color: #8c8c8c;
+    font-family: montserrat-light, arial;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.75;
+    letter-spacing: normal;
+}
+
+.project-nav {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.project-nav-btn {
+    margin: 40px 5px 0 5px;
+    padding: 10px 24px 10px 24px;
+    color: #8c8c8c;
+    font-family: montserrat-light, arial;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    border-radius: 3px;
+    border: 1px solid #ebebeb;
+    background: none;
+}
+
+.project-nav-btn:hover {
+    background-color: #938575;
+    color: #ffffff;
+}
+
+.project-nav-btn:active {
+    background-color: #6E665D;
+    color: #ffffff;
+    /* судя по доп статьям outline: none нехорошо*/
+    outline-color: #8c8c8c;
+    outline-style: dotted;
+    outline-width: thin;
+    animation: bounce 1s;
+}
+
+.project-nav-btn-active {
+    background-color: #938575;
+    color: #ffffff;
+}
+
+/*
+.project-nav-list {
+    padding-top: 40px;
+    а можно и родителю было задать
+    display: flex;
+     но тогда надо корректировать рамки ссылок ниже
+    width: 605px;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.project-list-link {
+    text-decoration: none;
+    color: #8c8c8c;
+    font-family: montserrat-light, arial;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    на случай задавания фикс ширины родителя
+    width: 120px;
+    height: 32px;
+    
+    border-radius: 3px;
+    border: 1px solid #ebebeb;
+    padding: 10px 24px 8px 24px;
+    margin: 0 5px 0 5px;
+    не вижу смысла делать через margin-left:10px и у крайнего его отменять
+}
+
+.project-list-link:hover {
+    background-color: #938575;
+    color: #ffffff;
+}
+
+.project-list-link-active {
+    background-color: #938575;
+    color: #ffffff;
+}
+*/
+
+/*================project-project=====================*/
+
+.project-figure {
+    padding-top: 25px;
+    margin: 0 auto;
+    width: 1250px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.article {
+    margin: 15px;
+    padding: 0px;
+    width: 370px;
+    position: relative;
+}
+
+.article:hover .article-btn-link {
+    display: block;
+    transition: transform 1s ease-out,
+        background-color 800ms ease,
+        width 500ms ease-out,
+        height 500ms ease-out;
+}
+
+.article:hover .article-btn-search {
+    display: block;
+    transition: transform 1s ease-out,
+        background-color 800ms ease,
+        width 500ms ease-out,
+        height 500ms ease-out;
+}
+
+.article:hover .article-btn-link:hover {
+    transform: rotate(360deg);
+    width: 30px;
+    height: 30px;
+}
+
+.article:hover .article-btn-search:hover {
+    transform: rotate(360deg);
+    width: 30px;
+    height: 30px;
+}
+
+.article:hover .article-btn-link:active {
+    animation: bounce 1s;
+}
+
+.article:hover .article-btn-search:active {
+    animation: bounce 1s;
+}
+
+.article:hover .article-photo {
+    filter: brightness(50%);
+}
+
+.article:hover .article-txt-wrapper {
+    background-color: #373331;
+}
+
+.article:hover .article-txt-wrapper:before {
+    border-bottom: 10px solid #373331;
+}
+
+.article-photo {
+    display: block;
+    width: 100%;
+}
+
+.article-txt-wrapper {
+    width: 100%;
+    position: relative;
+    background-color: #fbfaf8;
+}
+
+.article-txt-wrapper:before {
+    content: "";
+    border: 10px solid transparent;
+    border-bottom: 10px solid #fbfaf8;
+    position: absolute;
+    top: -20px;
+    left: 19px;
+}
+
+.article-title {
+    margin: 0 0 14px 28px;
+    padding-top: 30px;
+    display: block;
+    text-align: center;
+    font-family: raleway, arial;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    color: #c0b199;
+    text-transform: capitalize;
+}
+
+.article:hover .article-title {
+    color: #ffffff;
+}
+
+.article-txt {
+    margin: 0 0 0 30px;
+    padding-bottom: 27px;
+    display: block;
+    text-align: center;
+    font-family: montserrat-light, arial;
+    font-size: 14px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: left;
+    color: #d1d1d1;
+    text-transform: capitalize;
+}
+
+.article:hover .article-txt {
+    color: #c0b099;
+}
+
+.article-btn-link,
+.article-btn-search {
+    width: 20px;
+    height: 20px;
+    display: none;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 35%;
+}
+
+.article-btn-link {
+    background-image: url('../img/link.png');
+    left: 40%;
+}
+
+.article-btn-search {
+    background-image: url('../img/lupa.png');
+    right: 39.5%;
+}
+
+.project-btn {
+    margin-top: 40px;
+    font-weight: 170;
+    color: #ffffff;
+    padding: 20px 45px 20px 45px;
+    font-family: raleway-extrabold, arial;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.64;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    background: #928575;
+    box-shadow: inset 0 -3px 0 #6e6358;
+}
+
+.project-btn:hover {
+    background-color: #736357;
+}
+
+.project-btn:active {
+    background-color: #95897B;
+    animation: bounce 1s;
+}
+
+/*=======================video===========================*/
+
+.video {
+    margin: 0 auto;
+    margin-top: 80px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 705px;
+    position: relative;
+    overflow: hidden;
+    background-color: #6e6358;
+}
+
+/*
+.video-item {
+    width: 200vh;
+    height: 200vh;
+     overflow: hidden; 
+}
+*/
+.video-txt-wrp {
+    margin: 0 auto;
+    width: 552px;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.video-txt-btn {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 0;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: url("../img/icon-play.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.video-txt-btn:hover {
+    transition: transform 1s ease-out,
+        background-color 100ms ease;
+    transform: rotate(360deg);
+}
+
+.video-txt-btn:active {
+    animation: bounce 1s;
+}
+
+.video-txt-title {
+    display: block;
+    margin-top: 44px;
+    font-family: raleway-medium, arial;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    color: #ffffff;
+}
+
+.video-txt-p {
+    display: block;
+    margin-top: 29px;
+    padding: 0;
+    text-align: justify;
+    font-family: montserrat-light, arial;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.75;
+    text-align: center;
+    color: #ffffff;
+}
+
+.video-txt-time {
+    display: block;
+    font-family: montserrat-light, arial;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: center;
+    color: #c0b099;
+}
+
+.video-txt-title,
+.video-txt-time {
+    display: block;
+}
+
+/*=======================mobile=====================*/
+
+.mobile {
+    display: block;
+    margin-top: 79px;
+    /*
+    padding: 116px 0 183px 0;
+    */
+    padding: 0;
+    background-image: url(../img/i-phone-in-hand.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: 423px 50%;
+
+}
+
+.mobile-title {
+    display: block;
+    margin-left: 877px;
+    padding-top: 116px;
+    font-family: raleway-semibold, arial;
+    font-size: 30px;
+    font-weight: 600;
+    color: #555555;
+}
+
+.mobile-txt {
+    display: block;
+    margin-top: 40px;
+    margin-left: 877px;
+    margin-right: 388px;
+    padding: 0;
+    font-family: montserrat-light, arial;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.75;
+    text-align: justify;
+    color: #8c8c8c;
+}
+
+.mobile-list {
+    display: block;
+    margin-top: 40px;
+    margin-left: 925px;
+    padding-bottom: 150px;
+    font-family: montserrat-light, arial;
+    font-size: 16px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #8c8c8c;
+    list-style-image: url(../img/01.png);
+    list-style-position: inside;
+}
