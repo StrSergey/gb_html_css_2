@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: montserrat-extralight;
+    src: url(../fonts/montserrat-extralight.ttf);
+}
+
+@font-face {
     font-family: raleway;
     src: url(../fonts/raleway-regular.ttf);
 }
@@ -25,6 +30,12 @@
     src: url(../fonts/raleway-semibold.ttf);
 }
 
+@font-face {
+    font-family: roboto-regular;
+
+    src: url(../fonts/roboto-regular.ttf);
+}
+
 @keyframes bounce {
 
     0%,
@@ -43,6 +54,32 @@
     80% {
         transform: translateY(-10px);
         transform: translateY(-10px);
+    }
+}
+
+@keyframes bounce2 {
+
+    0%,
+    20%,
+    60%,
+    100% {
+        transform: translatex(0);
+        transform: translatex(0);
+    }
+
+    40% {
+        transform: translatex(-5px);
+        transform: translatex(5px);
+    }
+
+    60% {
+        transform: translatex(5px);
+        transform: translatex(-5px);
+    }
+    
+    80% {
+        transform: translatex(-2px);
+        transform: translatex(2px);
     }
 }
 
@@ -712,46 +749,6 @@ input[type="search"]:focus {
     color: #ffffff;
 }
 
-/*
-.project-nav-list {
-    padding-top: 40px;
-    а можно и родителю было задать
-    display: flex;
-     но тогда надо корректировать рамки ссылок ниже
-    width: 605px;
-    list-style-type: none;
-    justify-content: space-between;
-}
-
-.project-list-link {
-    text-decoration: none;
-    color: #8c8c8c;
-    font-family: montserrat-light, arial;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 21px;
-    на случай задавания фикс ширины родителя
-    width: 120px;
-    height: 32px;
-    
-    border-radius: 3px;
-    border: 1px solid #ebebeb;
-    padding: 10px 24px 8px 24px;
-    margin: 0 5px 0 5px;
-    не вижу смысла делать через margin-left:10px и у крайнего его отменять
-}
-
-.project-list-link:hover {
-    background-color: #938575;
-    color: #ffffff;
-}
-
-.project-list-link-active {
-    background-color: #938575;
-    color: #ffffff;
-}
-*/
-
 /*================project-project=====================*/
 
 .project-figure {
@@ -1029,9 +1026,6 @@ input[type="search"]:focus {
 .mobile {
     display: block;
     margin-top: 79px;
-    /*
-    padding: 116px 0 183px 0;
-    */
     padding: 0;
     background-image: url(../img/i-phone-in-hand.png);
     width: 100%;
@@ -1081,3 +1075,426 @@ input[type="search"]:focus {
     list-style-image: url(../img/01.png);
     list-style-position: inside;
 }
+
+/*====================statistic======================*/
+
+.statistic {
+    padding: 69px 504px 60px 496px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #8c8c8c;
+    background-image: linear-gradient(to right, #211b19 0%, #4e3427 100%);
+}
+
+.statistic-sect {
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.statistic-sect:after {
+    content: "";
+    padding: 0;
+    margin-top: 32px;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+.statistic-icon {
+    padding: 0;
+    display: block;
+    height: 44px;
+    fill: #c0b199;
+    margin: 0 0 30px 0;
+}
+
+.statistic-title {
+    padding: 0;
+    width: 115px;
+    margin: 0 0 21px 0;
+    text-align: center;
+    color: #ffffff;
+    font-family: montserrat-extralight, arial;
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 0.75;
+}
+
+
+.statistic-txt {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: montserrat-light, arial;
+    line-height: 1.43;
+    text-transform: uppercase;
+    color: #c0b099;
+}
+
+.statistic-sect:hover .statistic-icon {
+    fill: #ffffff;
+}
+
+.statistic-sect:active .statistic-icon {
+    fill: #ffffff;
+    animation: bounce 1s;
+}
+
+.statistic-sect:hover .statistic-title {
+    color: #c0b199;
+}
+
+.statistic-sect:active .statistic-title {
+    color: #c0b199;
+}
+
+.statistic-sect:hover:after {
+    background-color: #c0b199;
+}
+
+.statistic-sect:active:after {
+    background-color: #c0b199;
+}
+
+/*=====================posts=======================*/
+
+.posts {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1920x;
+    flex-direction: column;
+}
+
+.posts-title {
+    margin: 80px 0 30px 0;
+    color: #555555;
+    font-family: raleway-semibold, arial;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.posts-txt {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 757px;
+    color: #8c8c8c;
+    font-family: montserrat-light, arial;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.75;
+    text-align: center;
+}
+
+.posts-figure {
+    padding-top: 25px;
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.posts-art {
+    margin: 15px;
+    padding: 0px;
+    width: 370px;
+    position: relative;
+    box-sizing: border-box;
+    border: solid 1px #f8f8f8;
+}
+
+.posts-art-photo {
+    display: block;
+    width: 100%;
+}
+
+.posts-art:hover .posts-art-photo {
+    filter: brightness(50%);
+}
+
+.posts-art-txt-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.posts-art:hover .posts-art-txt-wrapper {
+    background-color: #373331;
+}
+
+.posts-art-title {
+    margin: 0 0 19px 29px;
+    padding-top: 30px;
+    display: block;
+    text-align: center;
+    font-family: raleway, arial;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    color: #555555;
+}
+
+.posts-art:hover .posts-art-title {
+    color: #c0b099;
+}
+
+.posts-art-txt {
+    margin: 0 0 0 29px;
+    padding-bottom: 27px;
+    display: block;
+    text-align: center;
+    font-family: montserrat-light, arial;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.57;
+    text-align: left;
+    color: #8c8c8c;
+}
+
+.posts-art:hover .posts-art-txt {
+    color: #ffffff;
+}
+
+.posts-art-txt-more {
+    margin: 0 0 0 30px;
+    padding-bottom: 33px;
+    display: block;
+    position: relative;
+    text-align: center;
+    font-family: montserrat-light, arial;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.43;
+    text-align: left;
+    color: #c0b099;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.posts-art-txt-more:before {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    border-left: 5px solid #c0b099;
+    top: 5px;
+    left: 83px;
+}
+
+.posts-art-txt-more:hover {
+    color: #ffffff;
+}
+
+.posts-art-txt-more:active {
+    color: gold;
+    animation: bounce 1s;
+}
+
+.posts-art-txt-more:hover:before {
+    border-left: 5px solid #ffffff;
+}
+
+.posts-art-txt-more:active:before {
+    border-left: 5px solid gold;
+}
+
+.posts-art-calendar {
+    position: absolute;
+    width: 50px;
+    top: 20px;
+    left: 20px;
+}
+
+.posts-art-calendar-date {
+    padding: 10px;
+    background-color: #292929;
+    border-radius: 4px 4px 0 0;
+    font-family: montserrat-light, arial;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 0.83;
+    text-align: center;
+    color: #ffffff;
+}
+
+.posts-art:hover .posts-art-calendar-date {
+    background-color: #c0b099;
+}
+
+.posts-art-calendar-month {
+    padding: 10px;
+    background-color: #393939;
+    border-radius: 0 0 4px 4px;
+    font-family: roboto-regular, arial;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.67;
+    text-align: center;
+    color: #ffffff;
+}
+
+.posts-art:hover .posts-art-calendar-month {
+    background-color: #9c8c72;
+}
+
+.posts-art-pagination {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    top: 185px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.posts-btn {
+    padding: 0;
+    margin: 0;
+}
+
+.posts-btn-triangle {
+    fill: #d0d0d0;
+    margin-top: 40px;
+}
+
+.posts-btn-triangle:hover {
+    fill: #c0b199;
+}
+
+.posts-btn-triangle:active {
+    fill: #c0b199;
+    animation: bounce2 1s;
+}
+
+/*
+fill: #d0d0d0;
+    color: #d0d0d0;
+.pagination-circle {
+    margin-right: 5px;
+    display: flex;
+    width: 11px;
+    height: 11px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background-color: #ccc;
+    opacity: 0.5;
+    background-clip: content-box;
+}
+
+.pagination-circle:hover {
+    margin-right: 5px;
+    display: flex;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    opacity: 0.5;
+    border: 2px solid #cdc0ac;
+    background: none;
+}
+
+.pagination-circle:active {
+    margin-right: 5px;
+    display: flex;
+    width: 11px;
+    height: 11px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    opacity: 0.5;
+    border: 2px solid #cdc0ac;
+    background: #95897B;
+    animation: bounce 1s;
+}
+
+судя по всему тут эктив не нужен, оставил пока
+.pagination-circle-active {
+    margin-right: 5px;
+    display: flex;
+    width: 11px;
+    height: 11px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    opacity: 0.5;
+    border: 2px solid #cdc0ac;
+    background: none;
+    border: 2px solid #cdc0ac;
+    background: none;
+}
+
+
+
+
+
+
+.project-btn {
+    margin-top: 40px;
+    font-weight: 170;
+    color: #ffffff;
+    padding: 20px 45px 20px 45px;
+    font-family: raleway-extrabold, arial;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.64;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    background: #928575;
+    box-shadow: inset 0 -3px 0 #6e6358;
+}
+
+.project-btn:hover {
+    background-color: #736357;
+}
+
+.project-btn:active {
+    background-color: #95897B;
+    animation: bounce 1s;
+}
+
+.article:hover .article-btn-search {
+    display: block;
+    transition: transform 1s ease-out,
+        background-color 800ms ease,
+        width 500ms ease-out,
+        height 500ms ease-out;
+}
+
+.article:hover .article-btn-search:hover {
+    transform: rotate(360deg);
+    width: 30px;
+    height: 30px;
+}
+
+.article:hover .article-btn-link:active {
+    animation: bounce 1s;
+}
+
+.article:hover .article-btn-search:active {
+    animation: bounce 1s;
+}
+
+
+
+.article:hover .article-txt-wrapper:before {
+    border-bottom: 10px solid #373331;
+}
+*/
