@@ -1,4 +1,9 @@
 @font-face {
+    font-family: montserrat-regular;
+    src: url(../fonts/montserrat-regular.ttf);
+}
+
+@font-face {
     font-family: montserrat-light;
     src: url(../fonts/montserrat-light.ttf);
 }
@@ -76,7 +81,7 @@
         transform: translatex(5px);
         transform: translatex(-5px);
     }
-    
+
     80% {
         transform: translatex(-2px);
         transform: translatex(2px);
@@ -85,6 +90,7 @@
 
 body {
     margin: 0;
+    border: 1px solid black;
 }
 
 .container {
@@ -1025,19 +1031,19 @@ input[type="search"]:focus {
 
 .mobile {
     display: block;
-    margin-top: 79px;
-    padding: 0;
+    margin: 0 auto;
+    padding-top: 79px;
     background-image: url(../img/i-phone-in-hand.png);
-    width: 100%;
     background-repeat: no-repeat;
-    background-position: 423px 50%;
-
+    background-position: 423px bottom;
+    background-color: #fbfaf8;
 }
 
 .mobile-title {
     display: block;
     margin-left: 877px;
-    padding-top: 116px;
+    margin-top: 116px;
+    padding: 0;
     font-family: raleway-semibold, arial;
     font-size: 30px;
     font-weight: 600;
@@ -1046,30 +1052,24 @@ input[type="search"]:focus {
 
 .mobile-txt {
     display: block;
-    margin-top: 40px;
-    margin-left: 877px;
-    margin-right: 388px;
+    margin-left: 875px;
+    width: 665px;
     padding: 0;
     font-family: montserrat-light, arial;
     font-size: 16px;
     font-weight: 300;
     line-height: 1.75;
-    text-align: justify;
     color: #8c8c8c;
 }
 
 .mobile-list {
-    display: block;
-    margin-top: 40px;
-    margin-left: 925px;
-    padding-bottom: 150px;
+    margin: 0;
+    margin-left: 885px;
+    padding-bottom: 183px;
     font-family: montserrat-light, arial;
     font-size: 16px;
     font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 2;
-    letter-spacing: normal;
     text-align: left;
     color: #8c8c8c;
     list-style-image: url(../img/01.png);
@@ -1385,116 +1385,257 @@ input[type="search"]:focus {
     animation: bounce2 1s;
 }
 
-/*
-fill: #d0d0d0;
-    color: #d0d0d0;
-.pagination-circle {
-    margin-right: 5px;
+/*===================partners=====================*/
+
+.partners {
+    padding: 140px 0 139px 404px;
+    margin-top: 80px;
     display: flex;
-    width: 11px;
-    height: 11px;
-    border: 2px solid transparent;
-    border-radius: 50%;
-    background-color: #ccc;
-    opacity: 0.5;
-    background-clip: content-box;
+    background-image: url(../img/bcg-partners.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
 }
 
-.pagination-circle:hover {
-    margin-right: 5px;
-    display: flex;
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    opacity: 0.5;
-    border: 2px solid #cdc0ac;
-    background: none;
+.partners-logo1 {
+    content: url(../img/partners-1.png);
+    margin-right: 90px;
+    width: 210px;
 }
 
-.pagination-circle:active {
-    margin-right: 5px;
-    display: flex;
-    width: 11px;
-    height: 11px;
-    border: 2px solid transparent;
-    border-radius: 50%;
-    opacity: 0.5;
-    border: 2px solid #cdc0ac;
-    background: #95897B;
-    animation: bounce 1s;
-}
-
-судя по всему тут эктив не нужен, оставил пока
-.pagination-circle-active {
-    margin-right: 5px;
-    display: flex;
-    width: 11px;
-    height: 11px;
-    border: 2px solid transparent;
-    border-radius: 50%;
-    opacity: 0.5;
-    border: 2px solid #cdc0ac;
-    background: none;
-    border: 2px solid #cdc0ac;
-    background: none;
-}
-
-
-
-
-
-
-.project-btn {
-    margin-top: 40px;
-    font-weight: 170;
-    color: #ffffff;
-    padding: 20px 45px 20px 45px;
-    font-family: raleway-extrabold, arial;
-    font-size: 14px;
-    font-weight: 800;
-    line-height: 1.64;
-    text-transform: uppercase;
-    text-align: center;
-    border: 1px solid #ebebeb;
-    border-radius: 3px;
-    background: #928575;
-    box-shadow: inset 0 -3px 0 #6e6358;
-}
-
-.project-btn:hover {
-    background-color: #736357;
-}
-
-.project-btn:active {
-    background-color: #95897B;
-    animation: bounce 1s;
-}
-
-.article:hover .article-btn-search {
-    display: block;
+.partners-logo1:hover {
     transition: transform 1s ease-out,
-        background-color 800ms ease,
-        width 500ms ease-out,
-        height 500ms ease-out;
-}
-
-.article:hover .article-btn-search:hover {
+        background-color 100ms ease;
     transform: rotate(360deg);
-    width: 30px;
-    height: 30px;
 }
 
-.article:hover .article-btn-link:active {
+.partners-logo1:active {
+    -webkit-transform: scale(1.2);
+}
+
+.partners-logo2 {
+    content: url(../img/partners-2.png);
+    margin-right: 90px;
+    width: 210px;
+}
+
+.partners-logo2:hover {
+    transition: transform 1s ease-out,
+        background-color 100ms ease;
+    transform: rotate(360deg);
+}
+
+.partners-logo2:active {
+    -webkit-transform: scale(1.2);
+}
+
+.partners-logo3 {
+    content: url(../img/partners-3.png);
+    margin-right: 90px;
+    width: 210px;
+}
+
+.partners-logo3:hover {
+    transition: transform 1s ease-out,
+        background-color 100ms ease;
+    transform: rotate(360deg);
+}
+
+.partners-logo3:active {
+    -webkit-transform: scale(1.2);
+}
+
+.partners-logo4 {
+    content: url(../img/partners-4.png);
+    margin-right: 90px;
+    width: 210px;
+}
+
+.partners-logo4:hover {
+    transition: transform 1s ease-out,
+        background-color 100ms ease;
+    transform: rotate(360deg);
+}
+
+.partners-logo4:active {
+    -webkit-transform: scale(1.2);
+}
+
+/*======================others=====================*/
+
+.others {
+    padding: 80px 0 80px 376px;
+    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #1f1f1f;
+}
+
+/*===============others-about-wacom=================*/
+
+.about-wacom {
+    width: 258px;
+    margin-left: 367px;
+    margin-top: 80px;
+    margin-right: 41px;
+}
+
+.other-logo {
+    width: 181px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.logo-icon {
+    fill: white;
+}
+
+.logo-txt {
+    font-family: raleway, arial;
+    width: 115px;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 400;
+    letter-spacing: -1.36px;
+}
+
+.other-logo:hover .logo-icon {
+    fill: #c7b299;
+}
+
+.other-logo:hover .logo-txt {
+    color: #c7b299;
+}
+
+.other-logo:active .logo-icon {
+    fill: #95897B;
     animation: bounce 1s;
 }
 
-.article:hover .article-btn-search:active {
+.other-logo:active .logo-txt {
+    color: #95897B;
     animation: bounce 1s;
 }
 
-
-
-.article:hover .article-txt-wrapper:before {
-    border-bottom: 10px solid #373331;
+.about-wacom-txt {
+    font-family: montserrat-light, arial;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    text-align: left;
+    color: #555555;
+    width: 100%;
 }
-*/
+
+.about-wacom-more {
+    margin: 0 auto;
+    padding-bottom: 33px;
+    display: block;
+    position: relative;
+    text-align: center;
+    font-family: montserrat-regular, arial;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #d1d1d1;
+    text-align: left;
+    text-transform: capitalize;
+    text-decoration: none;
+
+}
+
+.about-wacom-more:before {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    border-left: 5px solid #ffffff;
+    top: 5px;
+    left: 83px;
+}
+
+.about-wacom-more:hover {
+    color: #c7b299;
+}
+
+.about-wacom-more:active {
+    color: #95897B;
+    animation: bounce 1s;
+}
+
+.about-wacom-more:hover:before {
+    border-left: 5px solid #c7b299;
+}
+
+.about-wacom-more:active:before {
+    border-left: 5px solid #95897B;
+}
+
+/*==============others-recent-photo=====================*/
+
+.recent-photo {
+    width: 258px;
+    margin-top: 108px;
+    margin-bottom: 81px;
+}
+
+.recent-photo-title {
+    font-family: raleway-bold, arial;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+.recent-photo-link {
+    text-decoration: none;
+}
+
+.recent-photo-link:hover .photo-link-title {
+    color: #ffffff;
+}
+
+.recent-photo-link:hover .photo-link-txt {
+    color: #c0b099;
+}
+
+.recent-photo-link:active .photo-link-title {
+    color: #c0b099;
+}
+
+.recent-photo-link:active .photo-link-txt {
+    color: #ffffff;
+}
+
+.photo-link-title {
+    font-family: montserrat-light, arial;
+    font-size: 12px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: left;
+    color: #393939;
+}
+
+.photo-link-txt {
+    font-family: montserrat-light, arial;
+    font-size: 14px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: left;
+    color: #555555;
+}
+
+.recent-photo-hr {
+    color: #292929;
+    height: 2px;
+    width: 270px;
+}
